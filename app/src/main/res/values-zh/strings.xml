@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xposed_desc">为小米平板5系列恢复键盘ESC键功能</string>
+</resources>

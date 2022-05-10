@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MiuiPadESC</string>
+    <string name="xposed_desc">Restore ESC function on Mi Pad 5 series</string>
+</resources>
