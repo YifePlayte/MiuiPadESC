@@ -1,10 +1,12 @@
 package com.yifeplayte.miuipadesc
 
+import android.os.Build
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yifeplayte.miuipadesc.hook.BaseHook
 import com.yifeplayte.miuipadesc.hook.NativeSetPadMode
+import com.yifeplayte.miuipadesc.hook.SwitchPadMode
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
@@ -19,7 +21,11 @@ class MainHook : IXposedHookLoadPackage {
             EzXHelperInit.setLogTag(TAG)
             EzXHelperInit.setToastTag(TAG)
             // Init hooks
-            initHooks(NativeSetPadMode)
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
+                initHooks(NativeSetPadMode)
+            } else {
+                initHooks(SwitchPadMode)
+            }
         }
     }
 

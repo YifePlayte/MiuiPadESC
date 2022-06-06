@@ -10,8 +10,8 @@ android {
         applicationId = "com.yifeplayte.miuipadesc"
         minSdk = 30
         targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
     }
 
     buildTypes {
@@ -45,6 +45,6 @@ android {
 }
 
 dependencies {
-    implementation("com.github.kyuubiran:EzXHelper:0.9.0")
+    implementation("com.github.kyuubiran:EzXHelper:0.9.2")
     compileOnly("de.robv.android.xposed:api:82")
 }
